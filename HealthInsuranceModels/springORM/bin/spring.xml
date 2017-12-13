@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:util="http://www.springframework.org/schema/util"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-3.0.xsd
+http://www.springframework.org/schema/util
+http://www.springframework.org/schema/util/spring-util-3.0.xsd
+"> 
+<context:annotation-config/>
+<context:property-placeholder location="jdbc.properties"/>
+<context:component-scan base-package="com.app"/>
+	<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" name="datasource">
+		<property name="driverClassName" value="${className}"/>
+		<property name="url" value="${url}"/>
+		<property name="username" value="${username}"/>
+		<property name="password" value="${password}"/>
+	</bean>
+	<bean class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean" name="sessionFactory">
+		<property name="dataSource" ref="datasource"/>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">create</prop>
+			</props>
+		</property>
+		<property name="annotatedClasses">
+			<list>
+				<value>springORM.Employee</value>
+			</list>
+		</property>
+	</bean>
+	<bean class="org.springframework.orm.hibernate3.HibernateTemplate" name="template">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+		
+	</bean>
+	<bean class="springORM.EmployeeDaoImple" name="empDao">
+		<property name="template">
+			<ref bean="template"/>
+			
+		</property>
+		
+	</bean>
+	
+
+</beans>
