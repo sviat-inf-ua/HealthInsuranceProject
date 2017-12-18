@@ -8,6 +8,15 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.*;
+import org.hibernate.validator.constraints.NotBlank;
+import org.hibernate.validator.constraints.NotEmpty;
+import org.hibernate.validator.constraints.Range;
+
 @Entity
 @Table(name="customer")
 public class Customer implements Serializable {
@@ -22,21 +31,37 @@ public class Customer implements Serializable {
 		this.id = id;
 	}
 	@Column
+	@NotBlank (message="Email can not be null")
 	private String email;
+	
+	
 	@Column
+	@NotBlank (message="First name can not be null")
 	private String fname; 
+//	@NotBlank (message="First name can not be null")
 	@Column
+	@NotBlank (message="Last Name can not be null")
 	private String lname;
+//	@NotBlank (message="Last Name can not be null")
 	@Column
 	private String mname;
 	@Column
+	@NotBlank (message="Date of birth can not be null")
 	private String dob;
+//	@NotBlank (message="Date of birth can not be null")
 	@Column
+	@NotBlank (message="Phone number can not be null")
 	private String phone;
+//	@NotBlank (message="Phone number can not be null")
 	@Column
-	private long ssn;
+	@NotNull (message="Social Security Number can not be null")
+	private Integer ssn;
+//	@NotBlank (message="Social Security Number can not be null")
 	@Column
+	@NotBlank (message="Password can not be null")
+	@Size (min=8, max=20, message="Password must contain between 8 and 20 characters")
 	private String pswd;
+//		
 	@Column
 	private boolean status;
 	
@@ -76,10 +101,10 @@ public class Customer implements Serializable {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	public long getSsn() {
+	public Integer getSsn() {
 		return ssn;
 	}
-	public void setSsn(long ssn) {
+	public void setSsn(Integer ssn) {
 		this.ssn = ssn;
 	}
 	public String getPswd() {
@@ -91,7 +116,7 @@ public class Customer implements Serializable {
 	public Customer() {
 		super();
 	}
-	public Customer(String email, String fname, String lname, String mname, String dob, String phone, long ssn,
+	public Customer(String email, String fname, String lname, String mname, String dob, String phone, Integer ssn,
 			String pswd, boolean status) {
 		super();
 		this.email = email;
@@ -110,7 +135,7 @@ public class Customer implements Serializable {
 	public void setStatus(boolean status) {
 		this.status = status;
 	}
-	public Customer(long id, String email, String fname, String lname, String mname, String dob, String phone, long ssn,
+	public Customer(long id, String email, String fname, String lname, String mname, String dob, String phone, Integer ssn,
 			String pswd, boolean status) {
 		super();
 		this.id = id;

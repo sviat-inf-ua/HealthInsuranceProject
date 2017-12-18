@@ -9,26 +9,30 @@
 </head>
 <body>
 <table>
-	<form action="create.spring" method="POST">
+	<%-- <form action="create.spring" method="POST"> --%>
+	<form:form action="create.spring" method="POST"  modelAttribute="customer">
 	<tr>
 	<td>
-		<input type="text" name="fname" placeholder="First Name">
+		<!-- <input type="text" name="fname" placeholder="First Name"> -->
+		<form:input path="fname" placeholder="First Name"/>
 	</td>
 	<td>
-		<%-- <form:errors path="fname" csstyle="color: red"></form:errors>	 --%>
+		<form:errors path="fname" cssStyle="color: red"></form:errors>
 	</td>
 	</tr>
 	<tr>
 	<td>
-		<input type="text" name="lname" placeholder="Last Name">
+		<!-- <input type="text" name="lname" placeholder="Last Name"> -->
+		<form:input path="lname" placeholder="Last Name"/>
 	</td>
 	<td>
-		<%-- <form:input path="lname" cssStyle="color: red"/> --%>
+		<form:errors path="lname" cssStyle="color: red"/> 
 	</td>
 	</tr>
 	<tr>
 	<td>
-		<input type="text" name="mname" placeholder="Middle Name">
+		<!-- <input type="text" name="mname" placeholder="Middle Name"> -->
+		<form:input path="mname" placeholder="Middle Name"/>
 	</td>
 	<td>
 		<%-- <form:errors path="dob" cssStyle="color: red"></form:errors> --%>
@@ -36,56 +40,59 @@
 </tr>
 	<tr>
 	<td>
-		<input type="email" name="email" placeholder="Email Address">
+		<!-- <input type="email" name="email" placeholder="Email Address"> -->
+		<form:input path="email" placeholder="Email Address"/>
 	</td>
 	<td>
-		<%-- <form:errors path="email" cssStyle="color: red" /> --%>
-	</td>
-	</tr>
-	<tr>
-	<td>
-		<input type="date" name="dob" placeholder="Date Of Birth">
-	</td>
-	<td>
-		<%-- <form:errors path="dob" cssStyle="color: red"></form:errors> --%>
+		<form:errors path="email" cssStyle="color: red" />
 	</td>
 	</tr>
 	<tr>
 	<td>
-		<input type="text" name="phone" placeholder="Phone Numeber">
+		<!-- <input type="date" name="dob" placeholder="Date Of Birth"> -->
+		<form:input path="dob" placeholder="Date of Birth"/>
 	</td>
 	<td>
-		<%-- <form:errors path="dob" cssStyle="color: red"></form:errors> --%>
+		<form:errors path="dob" cssStyle="color: red"></form:errors>
+	</td>
+	</tr>
+	<tr>
+	<td>
+		<!-- <input type="text" name="phone" placeholder="Phone Numeber"> -->
+		<form:input path="phone" placeholder="Phone Number"/>
+	</td>
+	<td>
+		<form:errors path="phone" cssStyle="color: red"></form:errors>
 	</td>
 </tr>
 <tr>
 	<td>
-		<input type="text" name="ssn" placeholder="SSN">
+		<!-- <input type="text" name="ssn" placeholder="SSN"> -->
+		<form:input path="ssn" placeholder="SSN"/>
 	</td>
 	<td>
-		<%-- <form:errors path="dob" cssStyle="color: red"></form:errors> --%>
+		<form:errors path="ssn" cssStyle="color: red"></form:errors>
 	</td>
 </tr>
 <tr>
 	<td>
-		<input type="password" name="pswd" placeholder="Password">
+		<!-- <input type="password" name="pswd" placeholder="Password"> -->
+		<form:input path="pswd" placeholder="Password"/>
 	</td>
 	<td>
-		<%-- <form:errors path="dob" cssStyle="color: red"></form:errors> --%>
+		<form:errors path="pswd" cssStyle="color: red"></form:errors> 
 	</td>
 </tr>
 <tr>
 	<td>
 		<input type="text" name="confirmPswd" placeholder="Confirm Password">
 	</td>
-	<td>
-		<%-- <form:errors path="dob" cssStyle="color: red"></form:errors> --%>
-	</td>
 </tr>
 <tr>
 	<td colspan="2"><input type="submit" name="submit" value="Register"></td>
 </tr>
-</form>
+</form:form>
+<%-- </form> --%>
 </table>
 </body>
 </html>

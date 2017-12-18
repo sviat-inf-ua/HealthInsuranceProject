@@ -40,7 +40,7 @@ public class CustomerDaoImpl implements ICustomerDao {
 		} catch(Exception ex) {
 			ex.printStackTrace();
 		} finally {
-			session.flush();
+//			session.flush();
 			session.close();
 		}
 	}
@@ -50,11 +50,14 @@ public class CustomerDaoImpl implements ICustomerDao {
 		// TODO Auto-generated method stub
 		Session session = null;
 		Transaction tx = null;
+		String sql = "from customer where email = "+ email;
+		Criteria criteria = null;
 		try {
 			session = factory.openSession();
 			tx = session.beginTransaction();
-			tx.begin();
-			Customer customer = (Customer)session.get(Customer.class, email);
+			criteria = session.createCriteria(Customer.class, sql);
+//			tx.begin();
+			Customer customer = (Customer) criteria.uniqueResult();
 			session.delete(customer);
 			tx.commit();
 			System.out.println("Customer deleted successfully");
@@ -76,7 +79,7 @@ public class CustomerDaoImpl implements ICustomerDao {
 		try {
 			session = factory.openSession();
 			tx = session.beginTransaction();
-			tx.begin();
+//			tx.begin();
 			Customer customer = (Customer) session.get(Customer.class, email);
 			session.update(customer);
 			tx.commit();
@@ -94,12 +97,15 @@ public class CustomerDaoImpl implements ICustomerDao {
 	public Customer getCustomerByEmail(String email) {
 		Session session = null;
 		Transaction tx = null;
+		String sql = "from customer where status = " + email;
+		Criteria criteria = null;
 		Customer customer = null;
 		try {
 			session = factory.openSession();
 			tx = session.beginTransaction();
-			tx.begin();
-			customer = (Customer)session.get(Customer.class, email);
+//			tx.begin();
+			criteria = session.createCriteria(Customer.class, sql);
+			customer = (Customer) criteria.uniqueResult();
 			tx.commit();
 			System.out.println("Custumer found");
 		} catch(Exception ex) {
@@ -120,7 +126,7 @@ public class CustomerDaoImpl implements ICustomerDao {
 		try {
 			session = factory.openSession();
 			tx = session.beginTransaction();
-			tx.begin();
+//			tx.begin();
 			customer = (Customer)session.get(Customer.class, id);
 			tx.commit();
 			System.out.println("Customer found");
@@ -143,7 +149,7 @@ public class CustomerDaoImpl implements ICustomerDao {
 		try {
 			session = factory.openSession();
 			tx = session.beginTransaction();
-			tx.begin();
+//			tx.begin();
 			criteria = session.createCriteria(Customer.class);
 			list = criteria.list();
 			tx.commit();
@@ -170,7 +176,7 @@ public class CustomerDaoImpl implements ICustomerDao {
 		try {
 			session = factory.openSession();
 			tx = session.beginTransaction();
-			tx.begin();
+//			tx.begin();
 			criteria = session.createCriteria(Customer.class);
 			list =criteria.list();
 			tx.commit();
@@ -196,7 +202,7 @@ public class CustomerDaoImpl implements ICustomerDao {
 		try {
 			session = factory.openSession();
 			tx = session.beginTransaction();
-			tx.begin();
+//			tx.begin();
 			criteria = session.createCriteria(Customer.class, sql);
 			list = criteria.list();
 			tx.commit();
