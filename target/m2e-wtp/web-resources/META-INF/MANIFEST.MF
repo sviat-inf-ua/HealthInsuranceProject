@@ -1,5 +1,10 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD:target/m2e-wtp/web-resources/META-INF/MANIFEST.MF
 Built-By: fernandobetancourt
 Build-Jdk: 1.8.0_151
+=======
+Built-By: sviat
+Build-Jdk: 1.8.0_144
+>>>>>>> myTempBranch:target/m2e-wtp/web-resources/META-INF/MANIFEST.MF
 Created-By: Maven Integration for Eclipse
 
