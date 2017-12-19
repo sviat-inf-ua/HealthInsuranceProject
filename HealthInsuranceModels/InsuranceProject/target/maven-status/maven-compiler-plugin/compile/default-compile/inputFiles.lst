@@ -1,7 +1,32 @@
+<<<<<<< HEAD
 /Users/fernandobetancourt/Documents/workspace/Spring/InsuranceProject/src/main/java/com/app/dao/ICustomerDao.java
+=======
+/Users/fernandobetancourt/Documents/workspace/Spring/InsuranceProject/src/main/java/com/app/dao/impl/PlanBenefitsDaoImpl.java
+/Users/fernandobetancourt/Documents/workspace/Spring/InsuranceProject/src/main/java/com/app/models/Location.java
+/Users/fernandobetancourt/Documents/workspace/Spring/InsuranceProject/src/main/java/com/app/service/CrudService.java
+>>>>>>> a1ee89d9040a9695346f0b0680388f889afde9a2
 /Users/fernandobetancourt/Documents/workspace/Spring/InsuranceProject/src/main/java/com/app/service/impl/CustomerServiceImpl.java
 /Users/fernandobetancourt/Documents/workspace/Spring/InsuranceProject/src/main/java/com/app/validators/UserValidator.java
 /Users/fernandobetancourt/Documents/workspace/Spring/InsuranceProject/src/main/java/com/app/service/ICustomerService.java
 /Users/fernandobetancourt/Documents/workspace/Spring/InsuranceProject/src/main/java/com/app/controller/customerController.java
+<<<<<<< HEAD
 /Users/fernandobetancourt/Documents/workspace/Spring/InsuranceProject/src/main/java/com/app/dao/impl/CustomerDaoImpl.java
+=======
+/Users/fernandobetancourt/Documents/workspace/Spring/InsuranceProject/src/main/java/com/app/models/DoctorType.java
+/Users/fernandobetancourt/Documents/workspace/Spring/InsuranceProject/src/main/java/com/app/service/IInsurancePlanService.java
+/Users/fernandobetancourt/Documents/workspace/Spring/InsuranceProject/src/main/java/com/app/service/IPlanBenefitsService.java
+/Users/fernandobetancourt/Documents/workspace/Spring/InsuranceProject/src/main/java/com/app/dao/impl/CustomerDaoImpl.java
+/Users/fernandobetancourt/Documents/workspace/Spring/InsuranceProject/src/main/java/com/app/models/InsurancePlan.java
+/Users/fernandobetancourt/Documents/workspace/Spring/InsuranceProject/src/main/java/com/app/service/LocationService.java
+/Users/fernandobetancourt/Documents/workspace/Spring/InsuranceProject/src/main/java/com/app/dao/ICustomerDao.java
+/Users/fernandobetancourt/Documents/workspace/Spring/InsuranceProject/src/main/java/com/app/dao/IInsurancePlanDao.java
+/Users/fernandobetancourt/Documents/workspace/Spring/InsuranceProject/src/main/java/com/app/models/Doctor.java
+/Users/fernandobetancourt/Documents/workspace/Spring/InsuranceProject/src/main/java/com/app/service/impl/InsurancePlanServiceImpl.java
+/Users/fernandobetancourt/Documents/workspace/Spring/InsuranceProject/src/main/java/com/app/models/PlanBenefits.java
+/Users/fernandobetancourt/Documents/workspace/Spring/InsuranceProject/src/main/java/com/app/dao/IPlanBenefitsDao.java
+/Users/fernandobetancourt/Documents/workspace/Spring/InsuranceProject/src/main/java/com/app/service/impl/PlanBenefitsServiceImpl.java
+/Users/fernandobetancourt/Documents/workspace/Spring/InsuranceProject/src/main/java/com/app/dao/impl/InsurancePlanImpl.java
+/Users/fernandobetancourt/Documents/workspace/Spring/InsuranceProject/src/main/java/com/app/service/DoctorTypeService.java
+/Users/fernandobetancourt/Documents/workspace/Spring/InsuranceProject/src/main/java/com/app/service/DoctorService.java
+>>>>>>> a1ee89d9040a9695346f0b0680388f889afde9a2
 /Users/fernandobetancourt/Documents/workspace/Spring/InsuranceProject/src/main/java/com/app/models/Customer.java

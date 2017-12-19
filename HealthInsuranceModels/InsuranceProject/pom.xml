@@ -6,6 +6,18 @@
   <packaging>war</packaging>
   <dependencies>
   
+<<<<<<< HEAD
+=======
+  <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
+<dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>javax.servlet-api</artifactId>
+    <version>3.1.0</version>
+    <scope>provided</scope>
+</dependency>
+  
+
+>>>>>>> a1ee89d9040a9695346f0b0680388f889afde9a2
   <!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-catalina -->
 <dependency>
     <groupId>org.apache.tomcat</groupId>
@@ -81,6 +93,10 @@
     <version>1.2</version>
 </dependency>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> a1ee89d9040a9695346f0b0680388f889afde9a2
   </dependencies>
   <build>
     <testSourceDirectory>src/main/test</testSourceDirectory>

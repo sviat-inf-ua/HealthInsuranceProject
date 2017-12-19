@@ -33,6 +33,11 @@ xsi:schemaLocation="
 		<property name="annotatedClasses">
 			<list>
 				<value>com.app.models.Customer</value>
+<<<<<<< HEAD
+=======
+				<value>com.app.models.InsurancePlan</value>
+				<value>com.app.models.PlanBenefits</value>
+>>>>>>> a1ee89d9040a9695346f0b0680388f889afde9a2
 			</list>
 		</property>
 		<property name="hibernateProperties">

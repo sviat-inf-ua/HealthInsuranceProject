@@ -35,7 +35,11 @@
 		<form:input path="mname" placeholder="Middle Name"/>
 	</td>
 	<td>
+<<<<<<< HEAD
 		<form:errors path="dob" cssStyle="color: red"></form:errors>
+=======
+		<%-- <form:errors path="dob" cssStyle="color: red"></form:errors> --%>
+>>>>>>> a1ee89d9040a9695346f0b0680388f889afde9a2
 	</td>
 </tr>
 	<tr>

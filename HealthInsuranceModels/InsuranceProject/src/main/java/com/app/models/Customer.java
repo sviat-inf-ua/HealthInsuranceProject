@@ -7,6 +7,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+<<<<<<< HEAD
+=======
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+>>>>>>> a1ee89d9040a9695346f0b0680388f889afde9a2
 import javax.persistence.Table;
 import javax.validation.*;
 import javax.validation.constraints.NotNull;
@@ -27,6 +33,35 @@ public class Customer implements Serializable {
 	public long getId() {
 		return id;
 	}
+<<<<<<< HEAD
+=======
+	
+		@ManyToOne
+	    @JoinColumn(name = "insurancePlan_id")
+	    private InsurancePlan plan;
+	
+	public Customer(long id, InsurancePlan plan, String email, String fname, String lname, String mname, String dob,
+			String phone, Integer ssn, String pswd, boolean status) {
+		super();
+		this.id = id;
+		this.plan = plan;
+		this.email = email;
+		this.fname = fname;
+		this.lname = lname;
+		this.mname = mname;
+		this.dob = dob;
+		this.phone = phone;
+		this.ssn = ssn;
+		this.pswd = pswd;
+		this.status = status;
+	}
+	public InsurancePlan getPlan() {
+		return plan;
+	}
+	public void setPlan(InsurancePlan plan) {
+		this.plan = plan;
+	}
+>>>>>>> a1ee89d9040a9695346f0b0680388f889afde9a2
 	public void setId(long id) {
 		this.id = id;
 	}

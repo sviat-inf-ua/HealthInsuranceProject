@@ -7,6 +7,10 @@ import org.springframework.stereotype.Service;
 
 import com.app.dao.ICustomerDao;
 import com.app.models.Customer;
+<<<<<<< HEAD
+=======
+import com.app.models.InsurancePlan;
+>>>>>>> a1ee89d9040a9695346f0b0680388f889afde9a2
 import com.app.service.ICustomerService;
 @Service("customerService")
 public class CustomerServiceImpl implements ICustomerService {
@@ -101,4 +105,17 @@ public class CustomerServiceImpl implements ICustomerService {
 		return list;
 	}
 
+<<<<<<< HEAD
+=======
+	@Override
+	public void addPlan(InsurancePlan plan, Customer customer) {
+		try {
+			customerDao.addPlan(plan, customer);
+		} catch(Exception ex) {
+			ex.printStackTrace();
+		}
+		
+	}
+
+>>>>>>> a1ee89d9040a9695346f0b0680388f889afde9a2
 }

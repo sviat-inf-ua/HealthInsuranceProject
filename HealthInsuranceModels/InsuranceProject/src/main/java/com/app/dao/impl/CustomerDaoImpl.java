@@ -3,6 +3,10 @@ package com.app.dao.impl;
 import java.util.List;
 
 import org.hibernate.Criteria;
+<<<<<<< HEAD
+=======
+import org.hibernate.Query;
+>>>>>>> a1ee89d9040a9695346f0b0680388f889afde9a2
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -11,6 +15,10 @@ import org.springframework.stereotype.Repository;
 
 import com.app.dao.ICustomerDao;
 import com.app.models.Customer;
+<<<<<<< HEAD
+=======
+import com.app.models.InsurancePlan;
+>>>>>>> a1ee89d9040a9695346f0b0680388f889afde9a2
 @Repository("customerDao")
 public class CustomerDaoImpl implements ICustomerDao {
 	
@@ -50,6 +58,7 @@ public class CustomerDaoImpl implements ICustomerDao {
 		// TODO Auto-generated method stub
 		Session session = null;
 		Transaction tx = null;
+<<<<<<< HEAD
 		String sql = "from customer where email = "+ email;
 		Criteria criteria = null;
 		try {
@@ -61,12 +70,29 @@ public class CustomerDaoImpl implements ICustomerDao {
 			session.delete(customer);
 			tx.commit();
 			System.out.println("Customer deleted successfully");
+=======
+		String sql = "from Customer where email = :email";
+		try {
+			session = factory.openSession();
+			tx = session.beginTransaction();
+			Query query = session.createQuery(sql);
+			query.setParameter("email", email);
+			Customer customer = (Customer) query.uniqueResult();
+			session.delete(customer);
+			tx.commit();
+			System.out.println("Customer deleted successfully");
+			session.flush();
+>>>>>>> a1ee89d9040a9695346f0b0680388f889afde9a2
 		} catch(Exception ex) {
 			System.out.println("operation was cancelled");
 			ex.printStackTrace();
 			
 		} finally {
+<<<<<<< HEAD
 			session.flush();
+=======
+			
+>>>>>>> a1ee89d9040a9695346f0b0680388f889afde9a2
 			session.close();
 		}
 	}
@@ -97,15 +123,25 @@ public class CustomerDaoImpl implements ICustomerDao {
 	public Customer getCustomerByEmail(String email) {
 		Session session = null;
 		Transaction tx = null;
+<<<<<<< HEAD
 		String sql = "from customer where status = " + email;
 		Criteria criteria = null;
+=======
+		String sql = "from Customer where email = :email";
+>>>>>>> a1ee89d9040a9695346f0b0680388f889afde9a2
 		Customer customer = null;
 		try {
 			session = factory.openSession();
 			tx = session.beginTransaction();
 //			tx.begin();
+<<<<<<< HEAD
 			criteria = session.createCriteria(Customer.class, sql);
 			customer = (Customer) criteria.uniqueResult();
+=======
+			Query query = session.createQuery(sql);
+			query.setParameter("email", email);
+			customer = (Customer) query.uniqueResult();
+>>>>>>> a1ee89d9040a9695346f0b0680388f889afde9a2
 			tx.commit();
 			System.out.println("Custumer found");
 		} catch(Exception ex) {
@@ -145,6 +181,7 @@ public class CustomerDaoImpl implements ICustomerDao {
 		Session session = null;
 		Transaction tx = null;
 		List<Customer> list = null;
+<<<<<<< HEAD
 		Criteria criteria = null;
 		try {
 			session = factory.openSession();
@@ -154,11 +191,26 @@ public class CustomerDaoImpl implements ICustomerDao {
 			list = criteria.list();
 			tx.commit();
 			System.out.println("All customers found");
+=======
+		String sql = "from Customer";
+		try {
+			session = factory.openSession();
+			tx = session.beginTransaction();
+			Query query = session.createQuery(sql);
+			list = query.list();
+			tx.commit();
+			System.out.println("All customers found");
+			session.flush();
+>>>>>>> a1ee89d9040a9695346f0b0680388f889afde9a2
 		} catch(Exception ex) {
 			System.out.println("no customer found");
 			ex.printStackTrace();
 		} finally {
+<<<<<<< HEAD
 			session.flush();
+=======
+			
+>>>>>>> a1ee89d9040a9695346f0b0680388f889afde9a2
 			session.close();
 		}
 		return list;
@@ -170,6 +222,7 @@ public class CustomerDaoImpl implements ICustomerDao {
 		Transaction tx = null;
 		status = true;
 		List<Customer> list = null;
+<<<<<<< HEAD
 		String sql = "from customer where status = " + status;
 		Criteria criteria = null;
 		
@@ -181,11 +234,27 @@ public class CustomerDaoImpl implements ICustomerDao {
 			list =criteria.list();
 			tx.commit();
 			System.out.println("All active customers found");
+=======
+		String sql = "from Customer where status =  :status";
+		try {
+			session = factory.openSession();
+			tx = session.beginTransaction();
+			Query query = session.createQuery(sql);
+			query.setParameter("status", status);
+			list = query.list();
+			tx.commit();
+			System.out.println("All active customers found");
+			session.flush();
+>>>>>>> a1ee89d9040a9695346f0b0680388f889afde9a2
 		} catch(Exception ex) {
 			System.out.println("no active customer found");
 			ex.printStackTrace();
 		} finally {
+<<<<<<< HEAD
 			session.flush();
+=======
+			
+>>>>>>> a1ee89d9040a9695346f0b0680388f889afde9a2
 			session.close();
 		}
 		return list;
@@ -195,6 +264,7 @@ public class CustomerDaoImpl implements ICustomerDao {
 	public List<Customer> getInActiveCustomers(boolean status) {
 		Session session = null;
 		Transaction tx = null;
+<<<<<<< HEAD
 		status = false;
 		List<Customer> list = null;
 		Criteria criteria = null;
@@ -215,6 +285,47 @@ public class CustomerDaoImpl implements ICustomerDao {
 			session.close();
 		}
 		return null;
+=======
+		status = true;
+		List<Customer> list = null;
+		String sql = "from Customer where status =  :status";
+		try {
+			session = factory.openSession();
+			tx = session.beginTransaction();
+			Query query = session.createQuery(sql);
+			query.setParameter("status", status);
+			list = query.list();
+			tx.commit();
+			System.out.println("All active customers found");
+			session.flush();
+		} catch(Exception ex) {
+			System.out.println("no active customer found");
+			ex.printStackTrace();
+		} finally {
+			
+			session.close();
+		}
+		return list;
+	}
+
+	@Override
+	public void addPlan(InsurancePlan plan, Customer customer) {
+		Session session = null;
+		Transaction tx = null;
+		try {
+			session = factory.openSession();
+			tx = session.beginTransaction();
+			customer.setPlan(plan);
+			session.update(customer);
+			tx.commit();
+			session.flush();
+		} catch(Exception ex) {
+			ex.printStackTrace();
+		} finally {
+			session.close();
+		}
+		
+>>>>>>> a1ee89d9040a9695346f0b0680388f889afde9a2
 	}
 
 }

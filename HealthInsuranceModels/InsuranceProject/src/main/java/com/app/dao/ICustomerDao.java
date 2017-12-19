@@ -3,6 +3,10 @@ package com.app.dao;
 import java.util.List;
 
 import com.app.models.Customer;
+<<<<<<< HEAD
+=======
+import com.app.models.InsurancePlan;
+>>>>>>> a1ee89d9040a9695346f0b0680388f889afde9a2
 
 public interface ICustomerDao {
 	public void createCustomer(Customer customer);
@@ -13,4 +17,8 @@ public interface ICustomerDao {
 	public List<Customer> getAllCustomers();
 	public List<Customer> getActiveCustomers(boolean status);
 	public List<Customer> getInActiveCustomers(boolean status);
+<<<<<<< HEAD
+=======
+	public void addPlan(InsurancePlan plan, Customer customer);
+>>>>>>> a1ee89d9040a9695346f0b0680388f889afde9a2
 }
