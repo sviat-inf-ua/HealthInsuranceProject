@@ -1,0 +1,50 @@
+package com.app.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.app.dao.IInsurancePlanDao;
+import com.app.models.InsurancePlan;
+import com.app.service.IInsurancePlanService;
+@Service("insurancePlanService")
+public class InsurancePlanServiceImpl implements IInsurancePlanService {
+
+	@Autowired
+	private IInsurancePlanDao insurancePlanDao;
+	@Override
+	public void createPlan(InsurancePlan insurancePlan) {
+		try {
+			insurancePlanDao.createPlan(insurancePlan);
+		} catch(Exception ex) {
+			ex.printStackTrace();
+		}
+
+	}
+
+	@Override
+	public void deletePlan(int id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void updatePlan(InsurancePlan plan) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public InsurancePlan getInsurancePlanById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<InsurancePlan> getAllInsurancePlan() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

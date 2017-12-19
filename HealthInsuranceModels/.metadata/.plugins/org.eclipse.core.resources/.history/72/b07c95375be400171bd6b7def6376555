@@ -1,0 +1,40 @@
+package com.app.dao.impl;
+
+import java.util.List;
+
+import com.app.dao.IInsurancePlanDao;
+import com.app.models.InsurancePlan;
+
+public class InsurancePlanImpl implements IInsurancePlanDao {
+
+	@Override
+	public void createPlan(InsurancePlan insurancePlan) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void deletePlan(int id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void updatePlan(int id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public InsurancePlan getInsurancePlanById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<InsurancePlan> getAllInsurancePlan() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

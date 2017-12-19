@@ -1,0 +1,8 @@
+package com.app.dao;
+
+import com.dao.CrudDao;
+import com.entity.Location;
+
+public interface LocationDao extends CrudDao<Location, Integer>{
+
+}

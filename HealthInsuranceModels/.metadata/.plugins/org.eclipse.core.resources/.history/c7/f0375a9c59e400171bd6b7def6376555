@@ -1,0 +1,76 @@
+package com.app.models;
+
+import java.io.Serializable;
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="insurancePlan")
+public class InsurancePlan implements Serializable {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column
+	private int id;
+	
+	@Override
+	public String toString() {
+		return "InsurancePlan [id=" + id + ", name=" + name + ", totalAnnualAmount=" + totalAnnualAmount
+				+ ", coverAmount=" + coverAmount + ", customer=" + customer + "]";
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getTotalAnnualAmount() {
+		return totalAnnualAmount;
+	}
+	public void setTotalAnnualAmount(double totalAnnualAmount) {
+		this.totalAnnualAmount = totalAnnualAmount;
+	}
+	public double getCoverAmount() {
+		return coverAmount;
+	}
+	public void setCoverAmount(double coverAmount) {
+		this.coverAmount = coverAmount;
+	}
+	public Customer getCustomer() {
+		return customer;
+	}
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+	public InsurancePlan(int id, String name, double totalAnnualAmount, double coverAmount, Customer customer) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.totalAnnualAmount = totalAnnualAmount;
+		this.coverAmount = coverAmount;
+		this.customer = customer;
+	}
+	public InsurancePlan() {
+		super();
+	}
+	@Column
+	private String name;
+	@Column
+	private double totalAnnualAmount;
+	@Column
+	private double coverAmount;
+	@Column
+	private Customer customer;
+}

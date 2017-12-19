@@ -1,0 +1,8 @@
+package com.app.dao;
+
+
+
+
+public interface DoctorDao extends CrudDao<Doctor, Integer>{
+
+}

@@ -1,0 +1,7 @@
+package com.app.dao;
+
+import com.app.models.DoctorType;
+
+public interface DoctorTypeDao extends CrudDao<DoctorType, Integer>{
+
+}

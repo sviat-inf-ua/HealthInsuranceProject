@@ -1,0 +1,40 @@
+package com.app.service.impl;
+
+import java.util.List;
+
+import com.app.models.InsurancePlan;
+import com.app.service.IInsurancePlanService;
+
+public class InsurancePlanServiceImpl implements IInsurancePlanService {
+
+	@Override
+	public void createPlan(InsurancePlan insurancePlan) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void deletePlan(int id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void updatePlan(InsurancePlan plan) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public InsurancePlan getInsurancePlanById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<InsurancePlan> getAllInsurancePlan() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

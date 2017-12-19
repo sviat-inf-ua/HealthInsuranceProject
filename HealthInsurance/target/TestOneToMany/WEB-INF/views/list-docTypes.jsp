@@ -5,7 +5,7 @@
 <html>
 
 <head>
-	<title>List Doctor Types</title>
+	<title>List types of doctors</title>
 	
 	<!-- reference our style sheet -->
 
@@ -19,7 +19,7 @@
 
 	<div id="wrapper">
 		<div id="header">
-			<h2>CRM - DocType some page</h2>
+			<h2>Doctor type creation</h2>
 		</div>
 	</div>
 	
@@ -29,8 +29,8 @@
 		
 			<!-- put new button: Add Customer -->
 		
-			<input type="button" value="Add DocType"
-				   onclick="window.location.href='addDocTypeForm'; return false;"
+			<input type="button" value="Add Doctor type"
+				   onclick="window.location.href='saveDocType'; return false;"
 				   class="add-button"
 			/>
 		
@@ -38,7 +38,7 @@
 		
 			<table>
 				<tr>
-					<th>Doctor Type</th>
+					<th>Type</th>
 				</tr>
 				
 				<!-- loop over and print our customers -->
@@ -47,21 +47,21 @@
 					<!-- construct an "update" link with customer id -->
 					<%-- <c:url var="updateLink" value="/customer/showFormForUpdate">
 						<c:param name="customerId" value="${tempCustomer.id}" />
-					</c:url>					
+					</c:url>	 --%>				
 
 					<!-- construct an "delete" link with customer id -->
-					<c:url var="deleteLink" value="/customer/delete">
+					<%-- <c:url var="deleteLink" value="/customer/delete">
 						<c:param name="customerId" value="${tempCustomer.id}" />
-					</c:url>			 --%>		
+					</c:url>	 --%>				
 					
 					<tr>
 						<td> ${tempDocType.doctorType} </td>
 						
 						<td>
 							<!-- display the update link -->
-							<%-- <a href="${updateLink}">Update</a>
+							<%-- <a href="${updateLink}">Update</a> --%>
 							|
-							<a href="${deleteLink}"
+							<%-- <a href="${deleteLink}"
 							   onclick="if (!(confirm('Are you sure you want to delete this customer?'))) return false">Delete</a> --%>
 						</td>
 						
