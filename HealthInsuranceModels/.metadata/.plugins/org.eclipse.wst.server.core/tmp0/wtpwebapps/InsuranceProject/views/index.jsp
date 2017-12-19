@@ -10,6 +10,7 @@
 	<h1>welcome to users page</h1>
 	<a href="registerUser.spring">Register page</a>
 	<a href="login.spring">Login</a>
-	<a href="plan.spring">Login</a>
+	<a href="plan.spring">apply</a>
+	<a href="benefits.spring">benefit</a>
 </body>
 </html>

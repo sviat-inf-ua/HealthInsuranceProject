@@ -1,0 +1,59 @@
+package com.app.dao.impl;
+
+import java.util.List;
+
+import com.app.dao.IPlanBenefitsDao;
+import com.app.models.InsurancePlan;
+import com.app.models.PlanBenefits;
+
+public class PlanBenefitsDaoImpl implements IPlanBenefitsDao {
+
+	@Override
+	public void createPlanBenefit(PlanBenefits planBenefits) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void deletePlanBenefit(PlanBenefits planBenefits) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void updatePlanBenefit(PlanBenefits planBenefits) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public PlanBenefits getPlanBenefitById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<PlanBenefits> getAllPlanBenefits() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<PlanBenefits> getPlanBenefitsByPlan(InsurancePlan insurancePlan) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void addPlanBenefitsToPlan(InsurancePlan insurancePlan, PlanBenefits planBenefits) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void removePlanBenefitsFromPlan(InsurancePlan insurancePlan, PlanBenefits planBenefits) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

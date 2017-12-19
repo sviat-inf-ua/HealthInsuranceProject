@@ -3,4 +3,7 @@
 <typeInfo handle="=InsuranceProject/src\/main\/java&lt;com.app.dao{IInsurancePlanDao.java[IInsurancePlanDao" modifiers="513" timestamp="1513647109000"/>
 <typeInfo handle="=InsuranceProject/src\/main\/java&lt;com.app.service{IInsurancePlanService.java[IInsurancePlanService" modifiers="513" timestamp="1513647729000"/>
 <typeInfo handle="=InsuranceProject/\/Library\/Java\/JavaVirtualMachines\/jdk1.8.0_151.jdk\/Contents\/Home\/jre\/lib\/rt.jar&lt;java.io(Serializable.class[Serializable" modifiers="1537" timestamp="1504666619000"/>
+<typeInfo handle="=InsuranceProject/src\/main\/java&lt;com.app.dao{IPlanBenefitsDao.java[IPlanBenefitsDao" modifiers="513" timestamp="1513706411000"/>
+<typeInfo handle="=InsuranceProject/src\/main\/java&lt;com.app.service{IPlanBenefitsService.java[IPlanBenefitsService" modifiers="513" timestamp="1513713389000"/>
+<typeInfo handle="=InsuranceProject/\/Users\/fernandobetancourt\/.m2\/repository\/org\/hibernate\/hibernate-core\/4.3.11.Final\/hibernate-core-4.3.11.Final.jar&lt;org.hibernate.metamodel.domain(IndexedPluralAttribute.class[IndexedPluralAttribute" modifiers="1537" timestamp="1513643199000"/>
 </typeInfoHistroy>
