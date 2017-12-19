@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:mvc="http://www.springframework.org/schema/mvc" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="
+    http://www.springframework.org/schema/beans     
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://www.springframework.org/schema/mvc
+    http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+<mvc:annotation-driven />
+
+<context:component-scan base-package="com.app"></context:component-scan>
+<context:annotation-config/>
+<context:property-placeholder location="/WEB-INF/jdbc.properties"/>
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="views/" />  
+        <property name="suffix" value=".jsp" />  
+	</bean>
+	
+  <bean class="org.springframework.jdbc.datasource.DriverManagerDataSource" name="datasource">
+		<property name="driverClassName" value="${className}"/>
+		<property name="url" value="${url}"/>
+		<property name="username" value="root"/>
+		<property name="password" value="${password}"/>
+	</bean>
+	 <bean class="org.springframework.orm.hibernate4.LocalSessionFactoryBean" name="factory">
+		<property name="dataSource">
+			<ref bean="datasource"/>
+		</property>
+		<property name="annotatedClasses">
+			<list>
+				<value>com.app.models.Customer</value>
+				<value>com.app.models.InsurancePlan</value>
+				<value>com.app.models.PlanBenefits</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">create</prop>
+			</props>
+		</property>
+	</bean>  
+	 
+</beans>
