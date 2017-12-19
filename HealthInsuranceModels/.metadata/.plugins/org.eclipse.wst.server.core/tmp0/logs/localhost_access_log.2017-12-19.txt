@@ -87,3 +87,13 @@
 0:0:0:0:0:0:0:1 - - [19/Dec/2017:01:08:33 -0500] "GET /InsuranceProject/apply.spring HTTP/1.1" 200 585
 0:0:0:0:0:0:0:1 - - [19/Dec/2017:01:08:36 -0500] "POST /InsuranceProject/doapply.spring HTTP/1.1" 200 405
 0:0:0:0:0:0:0:1 - - [19/Dec/2017:01:09:09 -0500] "POST /InsuranceProject/doapply.spring HTTP/1.1" 200 405
+0:0:0:0:0:0:0:1 - - [19/Dec/2017:08:33:46 -0500] "POST /InsuranceProject/doapply.spring HTTP/1.1" 500 3978
+0:0:0:0:0:0:0:1 - - [19/Dec/2017:08:34:10 -0500] "POST /InsuranceProject/dologin.spring HTTP/1.1" 200 398
+0:0:0:0:0:0:0:1 - - [19/Dec/2017:08:34:14 -0500] "GET /InsuranceProject/apply.spring HTTP/1.1" 200 587
+0:0:0:0:0:0:0:1 - - [19/Dec/2017:08:34:16 -0500] "POST /InsuranceProject/doapply.spring HTTP/1.1" 200 425
+127.0.0.1 - - [19/Dec/2017:09:39:15 -0500] "GET / HTTP/1.1" 404 1070
+0:0:0:0:0:0:0:1 - - [19/Dec/2017:09:39:16 -0500] "GET /InsuranceProject/ HTTP/1.1" 200 397
+0:0:0:0:0:0:0:1 - - [19/Dec/2017:09:39:17 -0500] "GET /InsuranceProject/login.spring HTTP/1.1" 200 488
+0:0:0:0:0:0:0:1 - - [19/Dec/2017:09:39:26 -0500] "POST /InsuranceProject/dologin.spring HTTP/1.1" 200 398
+0:0:0:0:0:0:0:1 - - [19/Dec/2017:09:39:27 -0500] "GET /InsuranceProject/apply.spring HTTP/1.1" 200 587
+0:0:0:0:0:0:0:1 - - [19/Dec/2017:09:39:38 -0500] "POST /InsuranceProject/doapply.spring HTTP/1.1" 200 425

@@ -1,0 +1,7 @@
+package com.app.models;
+
+import java.io.Serializable;
+
+public class PlanBenefits implements Serializable {
+
+}
