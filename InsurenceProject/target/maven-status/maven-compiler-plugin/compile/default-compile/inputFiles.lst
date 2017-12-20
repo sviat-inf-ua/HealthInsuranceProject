@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 /Users/fernandobetancourt/Documents/GitHub/summitHealthInsuranceProject/InsurenceProject/src/main/java/com/service/LocationService.java
 /Users/fernandobetancourt/Documents/GitHub/summitHealthInsuranceProject/InsurenceProject/src/main/java/com/dao/impl/LocationDaoImpl.java
 /Users/fernandobetancourt/Documents/GitHub/summitHealthInsuranceProject/InsurenceProject/src/main/java/com/service/impl/DoctorServiceImpl.java
@@ -27,6 +28,8 @@
 /Users/fernandobetancourt/Documents/GitHub/summitHealthInsuranceProject/InsurenceProject/src/main/java/com/service/ICustomerService.java
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> parent of 4eb72f8... project 1
 <<<<<<< HEAD
 C:\Users\sviat\Documents\GitHub\summitHealthInsuranceProject\InsurenceProject\src\main\java\com\service\CrudService.java
 C:\Users\sviat\Documents\GitHub\summitHealthInsuranceProject\InsurenceProject\src\main\java\com\dao\CrudDao.java
@@ -89,4 +92,7 @@ C:\mainWorkspace\InsurenceProject\src\main\java\com\dao\LocationDao.java
 >>>>>>> parent of 4f7669a... frontEnd version 1.0
 =======
 >>>>>>> parent of 4f7669a... frontEnd version 1.0
+<<<<<<< HEAD
 >>>>>>> e73e530c54f80b1f7a63398b1e7c149ce2d2c832
+=======
+>>>>>>> parent of 4eb72f8... project 1

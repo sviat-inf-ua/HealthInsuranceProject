@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -9,7 +8,7 @@
         <title>GETTING STARTED WITH BRACKETS</title>
         <meta name="description" content="An interactive getting started guide for Brackets.">
         <link rel="stylesheet" href="main.css">
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <script src="mainJavaScript.js"></script>
     </head>
@@ -36,15 +35,15 @@
     </ul>
    
     <ul class="buttons">
-        <li><a href="${pageContext.request.contextPath}/admin/showDoctorTypeForm">Register as a Dotor </a></li>
-        <li id="contact"><a href="registerUser.spring">Register as a Customer</a></li>
+        <li><a href="appointments.php"> Logout </a></li>
+        <li id="contact"><a href="contactus.php">Contact Us</a></li>
         <li id="events">Login
             <div class="dropblock" id="servdrop">
                 <ul>
                     <li><h3>Are you a?</h3></li><br />
                     <li><a href="login.spring">Customer</a></li>
-                    <li><a href="${pageContext.request.contextPath}/showFormForAdd">Doctor</a></li>
-                    <li><a href="${pageContext.request.contextPath}/admin/showDoctorTypeForm">Admin</a></li>
+                    <li><a href="children/biology.php">Doctor</a></li>
+                    <li><a href="children/biology.php">Admin</a></li>
                 </ul>
             </div>
         </li>
@@ -52,10 +51,16 @@
         <li><a href="../index.php"> Home </a></li>  
     </ul>
 </nav>
-   
+       
+
+<a href="${pageContext.request.contextPath}/admin/listDoctorTypes">listDoctorTypes</a>
+<a href="${pageContext.request.contextPath}/admin/showDoctorTypeForm">showDoctorTypeForm</a>
+<a href="${pageContext.request.contextPath}/listDoctors">listDoctors</a>
+<a href="${pageContext.request.contextPath}/showFormForAdd">showFormForAdd</a>
+
+<a href="${pageContext.request.contextPath}/admin/showLocationForm">showLocationForm</a>
 
 <a href="registerUser.spring">Register page</a>
 	<a href="login.spring">Login</a>
-	</body>
-	</html>    
-	
+	    </body>
+</html>

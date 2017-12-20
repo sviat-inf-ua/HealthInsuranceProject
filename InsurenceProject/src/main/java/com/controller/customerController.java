@@ -41,15 +41,11 @@ public class customerController {
 		if (bindingResult.hasErrors()) {
 			return new ModelAndView("registerUser");
 		} else {
-		Customer customerCompare = customerService.getCustomerByEmail(customer.getEmail());
-		if(customerCompare == null) {
-			System.out.println(customer);
-			customerService.createCustomer(customer);
-			
-			return new ModelAndView("login", "msg", "welcome \n you need to login now");
-		} else {
-			return new ModelAndView("registerUser", "msg", "Email address already exists");
-		}
+//		
+		System.out.println(customer);
+		customerService.createCustomer(customer);
+		
+		return new ModelAndView("login", "msg", "welcome \n you need to login now");
 		}
 	}
 	

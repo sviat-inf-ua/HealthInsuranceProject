@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> e73e530c54f80b1f7a63398b1e7c149ce2d2c832
+=======
+<<<<<<< HEAD
+>>>>>>> parent of 4eb72f8... project 1
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 
     pageEncoding="UTF-8"%>
@@ -22,12 +26,16 @@
 
         <link rel="stylesheet" href="main.css">
 <<<<<<< HEAD
+<<<<<<< HEAD
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 =======
 
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 >>>>>>> e73e530c54f80b1f7a63398b1e7c149ce2d2c832
+=======
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+>>>>>>> parent of 4eb72f8... project 1
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 
     <script src="mainJavaScript.js"></script>
@@ -80,6 +88,7 @@
 
     <ul class="buttons">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <li><a href="${pageContext.request.contextPath}/admin/showDoctorTypeForm">Register as a Dotor </a></li>
         <li id="contact"><a href="registerUser.spring">Register as a Customer</a></li>
 =======
@@ -89,6 +98,10 @@
         <li id="contact"><a href="registerUser.spring">Register as a Customer</a></li>
 
 >>>>>>> e73e530c54f80b1f7a63398b1e7c149ce2d2c832
+=======
+        <li><a href="appointments.php"> Logout </a></li>
+        <li id="contact"><a href="contactus.php">Contact Us</a></li>
+>>>>>>> parent of 4eb72f8... project 1
         <li id="events">Login
 
             <div class="dropblock" id="servdrop">
@@ -117,6 +130,7 @@
 
 </nav>
 <<<<<<< HEAD
+<<<<<<< HEAD
    
 
 <a href="registerUser.spring">Register page</a>
@@ -138,3 +152,20 @@
 
 	</html>  
 >>>>>>> e73e530c54f80b1f7a63398b1e7c149ce2d2c832
+=======
+       
+=======
+>>>>>>> 038b94becfbb7955ee9edaa0dab49cf32c3841e6
+=======
+>>>>>>> parent of 4f7669a... frontEnd version 1.0
+
+<a href="${pageContext.request.contextPath}/admin/listDoctorTypes">listDoctorTypes</a>
+<a href="${pageContext.request.contextPath}/admin/showDoctorTypeForm">showDoctorTypeForm</a>
+<a href="${pageContext.request.contextPath}/listDoctors">listDoctors</a>
+<a href="${pageContext.request.contextPath}/showFormForAdd">showFormForAdd</a>
+
+<a href="${pageContext.request.contextPath}/admin/showLocationForm">showLocationForm</a>
+
+<a href="registerUser.spring">Register page</a>
+	<a href="login.spring">Login</a>
+>>>>>>> parent of 4eb72f8... project 1

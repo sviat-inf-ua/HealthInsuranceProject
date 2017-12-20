@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 com/dao/impl/DoctorDaoImpl.class
 com/dao/LocationDao.class
 com/service/DoctorService.class
@@ -27,6 +28,8 @@ com/controller/AdminController.class
 com/entity/Doctor.class
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> parent of 4eb72f8... project 1
 <<<<<<< HEAD
 com\dao\impl\CustomerDaoImpl.class
 com\dao\LocationDao.class
@@ -84,4 +87,7 @@ com\service\DoctorTypeService.class
 com\service\impl\DoctorTypeServiceImpl.class
 com\service\impl\DoctorServiceImpl.class
 com\dao\DoctorTypeDao.class
+<<<<<<< HEAD
 >>>>>>> e73e530c54f80b1f7a63398b1e7c149ce2d2c832
+=======
+>>>>>>> parent of 4eb72f8... project 1
