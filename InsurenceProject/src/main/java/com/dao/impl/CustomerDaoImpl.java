@@ -198,7 +198,7 @@ public class CustomerDaoImpl implements ICustomerDao {
 			tx = session.beginTransaction();
 			Query query = session.createQuery(sql);
 			query.setParameter("status", status);
-			list = query.list();
+			list = query.getResultList();
 			tx.commit();
 			System.out.println("All active customers found");
 			session.flush();

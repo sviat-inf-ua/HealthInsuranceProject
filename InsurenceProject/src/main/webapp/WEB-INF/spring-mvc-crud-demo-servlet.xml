@@ -40,12 +40,12 @@
          <property name="driverClass" value="com.mysql.jdbc.Driver" />
         <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/health?useSSL=false" />
         <property name="user" value="root" />
-        <property name="password" value="root" />  
+        <property name="password" value="18174291fb" />  
 
         <!-- these are connection pool properties for C3P0 -->
-        <property name="minPoolSize" value="5" />
+       <!--  <property name="minPoolSize" value="5" />
         <property name="maxPoolSize" value="20" />
-        <property name="maxIdleTime" value="30000" /> 
+        <property name="maxIdleTime" value="30000" />  -->
 	 </bean>  
 	 
     <!-- Step 2: Setup Hibernate session factory -->
