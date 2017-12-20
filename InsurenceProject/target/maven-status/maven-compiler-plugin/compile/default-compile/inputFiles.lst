@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\sviat\Documents\GitHub\summitHealthInsuranceProject\InsurenceProject\src\main\java\com\service\CrudService.java
 C:\Users\sviat\Documents\GitHub\summitHealthInsuranceProject\InsurenceProject\src\main\java\com\dao\CrudDao.java
 C:\Users\sviat\Documents\GitHub\summitHealthInsuranceProject\InsurenceProject\src\main\java\com\service\DoctorService.java
@@ -24,3 +25,33 @@ C:\Users\sviat\Documents\GitHub\summitHealthInsuranceProject\InsurenceProject\sr
 C:\Users\sviat\Documents\GitHub\summitHealthInsuranceProject\InsurenceProject\src\main\java\com\dao\DoctorTypeDao.java
 C:\Users\sviat\Documents\GitHub\summitHealthInsuranceProject\InsurenceProject\src\main\java\com\entity\DoctorType.java
 C:\Users\sviat\Documents\GitHub\summitHealthInsuranceProject\InsurenceProject\src\main\java\com\service\impl\DoctorServiceImpl.java
+=======
+C:\mainWorkspace\InsurenceProject\src\main\java\com\app\validators\UserValidator.java
+C:\mainWorkspace\InsurenceProject\src\main\java\com\app\service\CrudService.java
+C:\mainWorkspace\InsurenceProject\src\main\java\com\entity\Location.java
+C:\mainWorkspace\InsurenceProject\src\main\java\com\app\models\Customer.java
+C:\mainWorkspace\InsurenceProject\src\main\java\com\dao\CrudDao.java
+C:\mainWorkspace\InsurenceProject\src\main\java\com\service\DoctorService.java
+C:\mainWorkspace\InsurenceProject\src\main\java\com\dao\DoctorDao.java
+C:\mainWorkspace\InsurenceProject\src\main\java\com\app\controller\customerController.java
+C:\mainWorkspace\InsurenceProject\src\main\java\com\controller\DoctorController.java
+C:\mainWorkspace\InsurenceProject\src\main\java\com\controller\AdminController.java
+C:\mainWorkspace\InsurenceProject\src\main\java\com\entity\DoctorType.java
+C:\mainWorkspace\InsurenceProject\src\main\java\com\dao\impl\DoctorDaoImpl.java
+C:\mainWorkspace\InsurenceProject\src\main\java\com\service\impl\DoctorTypeServiceImpl.java
+C:\mainWorkspace\InsurenceProject\src\main\java\com\app\dao\CrudDao.java
+C:\mainWorkspace\InsurenceProject\src\main\java\com\entity\Doctor.java
+C:\mainWorkspace\InsurenceProject\src\main\java\com\dao\DoctorTypeDao.java
+C:\mainWorkspace\InsurenceProject\src\main\java\com\dao\impl\DoctorTypeDaoImpl.java
+C:\mainWorkspace\InsurenceProject\src\main\java\com\service\LocationService.java
+C:\mainWorkspace\InsurenceProject\src\main\java\com\app\dao\impl\CustomerDaoImpl.java
+C:\mainWorkspace\InsurenceProject\src\main\java\com\service\CrudService.java
+C:\mainWorkspace\InsurenceProject\src\main\java\com\service\DoctorTypeService.java
+C:\mainWorkspace\InsurenceProject\src\main\java\com\service\impl\LocationServiceImpl.java
+C:\mainWorkspace\InsurenceProject\src\main\java\com\app\dao\ICustomerDao.java
+C:\mainWorkspace\InsurenceProject\src\main\java\com\app\service\impl\CustomerServiceImpl.java
+C:\mainWorkspace\InsurenceProject\src\main\java\com\service\impl\DoctorServiceImpl.java
+C:\mainWorkspace\InsurenceProject\src\main\java\com\dao\impl\LocationDaoImpl.java
+C:\mainWorkspace\InsurenceProject\src\main\java\com\app\service\ICustomerService.java
+C:\mainWorkspace\InsurenceProject\src\main\java\com\dao\LocationDao.java
+>>>>>>> parent of 4f7669a... frontEnd version 1.0

@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 Manifest-Version: 1.0
 Built-By: sviat
 Build-Jdk: 1.8.0_144
 Created-By: Maven Integration for Eclipse
 
+=======
+Manifest-Version: 1.0
+Built-By: sviat
+Build-Jdk: 1.8.0_144
+Created-By: Maven Integration for Eclipse
+
+>>>>>>> parent of 4f7669a... frontEnd version 1.0
