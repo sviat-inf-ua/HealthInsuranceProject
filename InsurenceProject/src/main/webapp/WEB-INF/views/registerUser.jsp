@@ -6,15 +6,34 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+ <link rel="stylesheet" href="main.css">
+     	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script type='text/javascript' src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
+    <script src="viewJS.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+    	$("#phone").inputmask({"mask": "(999) 999-9999"});
+    });
+    function validatePassword() {
+    	var x = document.getElementById("pswd").value;
+    	var y = document.getElementById("confirmPswd").value;
+    	if (x != y) {
+    		alert('Password confirmation does not match password entered');
+    		return false;
+    	}
+    }
+    </script>
 </head>
 <body>
 <table>
+	<h1>${msg }</h1>
 	<%-- <form action="create.spring" method="POST"> --%>
-	<form:form action="create.spring" method="POST"  modelAttribute="customer">
+	<form:form action="create.spring" method="POST" id="form" onsubmit="return validatePassword()"  modelAttribute="customer">
 	<tr>
 	<td>
 		<!-- <input type="text" name="fname" placeholder="First Name"> -->
-		<form:input path="fname" placeholder="First Name"/>
+		<form:input path="fname" placeholder="First Name" />
 	</td>
 	<td>
 		<form:errors path="fname" cssStyle="color: red"></form:errors>
@@ -59,7 +78,7 @@
 	<tr>
 	<td>
 		<!-- <input type="text" name="phone" placeholder="Phone Numeber"> -->
-		<form:input path="phone" placeholder="Phone Number"/>
+		<form:input path="phone" id="phone" placeholder="Phone Number"/>
 	</td>
 	<td>
 		<form:errors path="phone" cssStyle="color: red"></form:errors>
@@ -77,15 +96,15 @@
 <tr>
 	<td>
 		<!-- <input type="password" name="pswd" placeholder="Password"> -->
-		<form:input path="pswd" placeholder="Password"/>
+		<form:input path="pswd" type="password" placeholder="Password"/>
 	</td>
 	<td>
-		<form:errors path="pswd" cssStyle="color: red"></form:errors> 
+		<form:errors path="pswd" id="pswd" type="password" cssStyle="color: red"></form:errors> 
 	</td>
 </tr>
 <tr>
 	<td>
-		<input type="text" name="confirmPswd" placeholder="Confirm Password">
+		<input type="password" name="confirmPswd" id="confirmPswd" placeholder="Confirm Password">
 	</td>
 </tr>
 <tr>

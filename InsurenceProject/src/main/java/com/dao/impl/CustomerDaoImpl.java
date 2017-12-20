@@ -83,7 +83,7 @@ public class CustomerDaoImpl implements ICustomerDao {
 			Customer customer = (Customer) session.get(Customer.class, email);
 			session.update(customer);
 			tx.commit();
-			session.flush();
+//			session.flush();
 			System.out.println("Customer Updated successfully");
 		} catch(Exception ex) {
 			System.out.println("Customer could not be updated");
@@ -111,8 +111,8 @@ public class CustomerDaoImpl implements ICustomerDao {
 			System.out.println("Customer could not be found");
 			ex.printStackTrace();
 		} finally {
-			session.flush();
-			session.close();
+//			session.flush();
+//			session.close();
 		}
 		return customer;
 	}

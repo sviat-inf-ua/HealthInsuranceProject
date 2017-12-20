@@ -50,7 +50,7 @@ public class Customer implements Serializable {
 	private String dob;
 //	@NotBlank (message="Date of birth can not be null")
 	@Column
-	@NotBlank (message="Phone number can not be null")
+	@NotNull (message="Social Security Number can not be null")
 	private String phone;
 //	@NotBlank (message="Phone number can not be null")
 	@Column
