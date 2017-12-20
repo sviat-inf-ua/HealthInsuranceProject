@@ -42,8 +42,8 @@
                 <ul>
                     <li><h3>Are you a?</h3></li><br />
                     <li><a href="login.spring">Customer</a></li>
-                    <li><a href="children/biology.php">Doctor</a></li>
-                    <li><a href="children/biology.php">Admin</a></li>
+                    <li><a href="${pageContext.request.contextPath}/showFormForAdd">Doctor</a></li>
+                    <li><a href="${pageContext.request.contextPath}/admin/showDoctorTypeForm">Admin</a></li>
                 </ul>
             </div>
         </li>

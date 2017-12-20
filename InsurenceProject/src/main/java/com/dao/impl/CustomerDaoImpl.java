@@ -42,7 +42,7 @@ public class CustomerDaoImpl implements ICustomerDao {
 			ex.printStackTrace();
 		} finally {
 //			session.flush();
-			session.close();
+//			session.close();
 		}
 	}
 
@@ -51,25 +51,24 @@ public class CustomerDaoImpl implements ICustomerDao {
 		// TODO Auto-generated method stub
 		Session session = null;
 		Transaction tx = null;
-		String sql = "from customer where email = "+ email;
-		Criteria criteria = null;
+		String sql = "from customer where email = :email";
 		try {
 			session = factory.openSession();
 			tx = session.beginTransaction();
-			criteria = session.createCriteria(Customer.class, sql);
-//			tx.begin();
-			Customer customer = (Customer) criteria.uniqueResult();
-			session.delete(customer);
-			tx.commit();
-			System.out.println("Customer deleted successfully");
-		} catch(Exception ex) {
-			System.out.println("operation was cancelled");
-			ex.printStackTrace();
-			
-		} finally {
-			session.flush();
-			session.close();
-		}
+			Query query = session.createQuery(sql);
+			query.setParameter("email", email);
+			int rs = query.executeUpdate();
+			if(rs!= 0) {
+				tx.commit();
+			} else {
+				tx.rollback();
+			}
+//			session.flush();
+			} catch(Exception ex) {
+				ex.printStackTrace();
+			} finally {
+//				session.close();
+			}
 	}
 
 	@Override
@@ -84,13 +83,13 @@ public class CustomerDaoImpl implements ICustomerDao {
 			Customer customer = (Customer) session.get(Customer.class, email);
 			session.update(customer);
 			tx.commit();
+			session.flush();
 			System.out.println("Customer Updated successfully");
 		} catch(Exception ex) {
 			System.out.println("Customer could not be updated");
 			ex.printStackTrace();
 		} finally {
-			session.flush();
-			session.close();
+//			session.close();
 		}
 	}
 
@@ -105,15 +104,15 @@ public class CustomerDaoImpl implements ICustomerDao {
 			tx = session.beginTransaction();
 			Query query = session.createQuery(sql);
 			query.setParameter("email", email);
-			customer = (Customer) query.uniqueResult();
+			customer = (Customer) query.getSingleResult();
 			tx.commit();
 			System.out.println("Custumer found");
 		} catch(Exception ex) {
 			System.out.println("Customer could not be found");
 			ex.printStackTrace();
 		} finally {
-		//	session.flush();
-			//session.close();
+			session.flush();
+			session.close();
 		}
 		return customer;
 	}
@@ -134,8 +133,8 @@ public class CustomerDaoImpl implements ICustomerDao {
 			System.out.println("customer could not be found");
 			ex.printStackTrace();
 		} finally {
-			session.flush();
-			session.close();
+//			session.flush();
+//			session.close();
 		}
 		return customer;
 	}
@@ -145,20 +144,19 @@ public class CustomerDaoImpl implements ICustomerDao {
 		Session session = null;
 		Transaction tx = null;
 		List<Customer> list = null;
-		Criteria criteria = null;
+		String sql = "from Customer";
 		try {
 			session = factory.openSession();
 			tx = session.beginTransaction();
-//			tx.begin();
-			criteria = session.createCriteria(Customer.class);
-			list = criteria.list();
+			Query query = session.createQuery(sql);
+			list = query.getResultList();
 			tx.commit();
 			System.out.println("All customers found");
+			session.flush();
 		} catch(Exception ex) {
 			System.out.println("no customer found");
 			ex.printStackTrace();
 		} finally {
-			session.flush();
 			session.close();
 		}
 		return list;
@@ -170,22 +168,20 @@ public class CustomerDaoImpl implements ICustomerDao {
 		Transaction tx = null;
 		status = true;
 		List<Customer> list = null;
-		String sql = "from customer where status = " + status;
-		Criteria criteria = null;
-		
+		String sql = "from Customer where status =  :status";
 		try {
 			session = factory.openSession();
 			tx = session.beginTransaction();
-//			tx.begin();
-			criteria = session.createCriteria(Customer.class);
-			list =criteria.list();
+			Query query = session.createQuery(sql);
+			query.setParameter("status", status);
+			list = query.getResultList();
 			tx.commit();
 			System.out.println("All active customers found");
+			session.flush();
 		} catch(Exception ex) {
 			System.out.println("no active customer found");
 			ex.printStackTrace();
 		} finally {
-			session.flush();
 			session.close();
 		}
 		return list;
@@ -195,26 +191,25 @@ public class CustomerDaoImpl implements ICustomerDao {
 	public List<Customer> getInActiveCustomers(boolean status) {
 		Session session = null;
 		Transaction tx = null;
-		status = false;
+		status = true;
 		List<Customer> list = null;
-		Criteria criteria = null;
-		String sql = "from Customer where status= "+ status;
+		String sql = "from Customer where status =  :status";
 		try {
 			session = factory.openSession();
 			tx = session.beginTransaction();
-//			tx.begin();
-			criteria = session.createCriteria(Customer.class, sql);
-			list = criteria.list();
+			Query query = session.createQuery(sql);
+			query.setParameter("status", status);
+			list = query.getResultList();
 			tx.commit();
-			System.out.println("All inactive custcomers");
+			System.out.println("All active customers found");
+			session.flush();
 		} catch(Exception ex) {
-			System.out.println("no inactive customer found");
+			System.out.println("no active customer found");
 			ex.printStackTrace();
 		} finally {
-			session.flush();
 			session.close();
 		}
-		return null;
+		return list;
 	}
 
 }
