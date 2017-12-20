@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -55,6 +56,8 @@
        
 =======
 >>>>>>> 038b94becfbb7955ee9edaa0dab49cf32c3841e6
+=======
+>>>>>>> parent of 4f7669a... frontEnd version 1.0
 
 <a href="${pageContext.request.contextPath}/admin/listDoctorTypes">listDoctorTypes</a>
 <a href="${pageContext.request.contextPath}/admin/showDoctorTypeForm">showDoctorTypeForm</a>

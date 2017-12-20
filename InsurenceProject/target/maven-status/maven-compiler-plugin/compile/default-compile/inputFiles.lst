@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 C:\Users\sviat\Documents\GitHub\summitHealthInsuranceProject\InsurenceProject\src\main\java\com\service\CrudService.java
 C:\Users\sviat\Documents\GitHub\summitHealthInsuranceProject\InsurenceProject\src\main\java\com\dao\CrudDao.java
 C:\Users\sviat\Documents\GitHub\summitHealthInsuranceProject\InsurenceProject\src\main\java\com\service\DoctorService.java
@@ -26,6 +27,8 @@ C:\Users\sviat\Documents\GitHub\summitHealthInsuranceProject\InsurenceProject\sr
 C:\Users\sviat\Documents\GitHub\summitHealthInsuranceProject\InsurenceProject\src\main\java\com\entity\DoctorType.java
 C:\Users\sviat\Documents\GitHub\summitHealthInsuranceProject\InsurenceProject\src\main\java\com\service\impl\DoctorServiceImpl.java
 =======
+=======
+>>>>>>> parent of 4f7669a... frontEnd version 1.0
 C:\mainWorkspace\InsurenceProject\src\main\java\com\app\validators\UserValidator.java
 C:\mainWorkspace\InsurenceProject\src\main\java\com\app\service\CrudService.java
 C:\mainWorkspace\InsurenceProject\src\main\java\com\entity\Location.java
@@ -54,4 +57,7 @@ C:\mainWorkspace\InsurenceProject\src\main\java\com\service\impl\DoctorServiceIm
 C:\mainWorkspace\InsurenceProject\src\main\java\com\dao\impl\LocationDaoImpl.java
 C:\mainWorkspace\InsurenceProject\src\main\java\com\app\service\ICustomerService.java
 C:\mainWorkspace\InsurenceProject\src\main\java\com\dao\LocationDao.java
+<<<<<<< HEAD
+>>>>>>> parent of 4f7669a... frontEnd version 1.0
+=======
 >>>>>>> parent of 4f7669a... frontEnd version 1.0

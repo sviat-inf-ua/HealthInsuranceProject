@@ -34,6 +34,7 @@
     <!-- Step 1: Define Database DataSource / connection pool -->
 	<bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
 <<<<<<< HEAD
+<<<<<<< HEAD
 		destroy-method="close">
 		<property name="driverClass" value="com.mysql.jdbc.Driver" />
 		<property name="jdbcUrl"
@@ -49,6 +50,8 @@
 
 	<!-- Step 2: Setup Hibernate session factory -->
 =======
+=======
+>>>>>>> parent of 4f7669a... frontEnd version 1.0
           destroy-method="close">
         <property name="driverClass" value="com.mysql.jdbc.Driver" />
         <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/health?useSSL=false" />
@@ -62,6 +65,9 @@
 	</bean>  
 	
     <!-- Step 2: Setup Hibernate session factory -->
+<<<<<<< HEAD
+>>>>>>> parent of 4f7669a... frontEnd version 1.0
+=======
 >>>>>>> parent of 4f7669a... frontEnd version 1.0
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
