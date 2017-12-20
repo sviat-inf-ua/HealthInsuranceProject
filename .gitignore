@@ -1,1 +1,6 @@
 /build/
+
+jbdc.properties
+spring-mvc-crud-demo-servlet.xml
+.DS_Store
+\target\*
