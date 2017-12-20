@@ -34,6 +34,11 @@
 
 	<!-- Step 1: Define Database DataSource / connection pool -->
 	<bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> e73e530c54f80b1f7a63398b1e7c149ce2d2c832
 		destroy-method="close">
 		<property name="driverClass" value="com.mysql.jdbc.Driver" />
 		<property name="jdbcUrl"
@@ -48,6 +53,29 @@
 	</bean>
 
 	<!-- Step 2: Setup Hibernate session factory -->
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> parent of 4f7669a... frontEnd version 1.0
+          destroy-method="close">
+        <property name="driverClass" value="com.mysql.jdbc.Driver" />
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/health?useSSL=false" />
+        <property name="user" value="root" />
+        <property name="password" value="root" /> 
+
+        <!-- these are connection pool properties for C3P0 -->
+        <property name="minPoolSize" value="5" />
+        <property name="maxPoolSize" value="20" />
+        <property name="maxIdleTime" value="30000" />
+	</bean>  
+	
+    <!-- Step 2: Setup Hibernate session factory -->
+<<<<<<< HEAD
+>>>>>>> parent of 4f7669a... frontEnd version 1.0
+=======
+>>>>>>> parent of 4f7669a... frontEnd version 1.0
+>>>>>>> e73e530c54f80b1f7a63398b1e7c149ce2d2c832
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
 		<property name="dataSource" ref="myDataSource" />
