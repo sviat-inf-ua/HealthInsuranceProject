@@ -16,7 +16,8 @@
 	<div id="container">
 		<h3>Save Location</h3>
 
-		<form:form action="saveLocation" modelAttribute="location" method="POST">
+		<form:form action="saveLocation" modelAttribute="location"
+			method="POST">
 
 			<!-- need to associate this data with customer id -->
 			<form:hidden path="id" />
@@ -24,33 +25,26 @@
 			<table>
 				<tbody>
 					<tr>
-						<td><input type="text" name="country"
-							placeholder="Country"></td>
+						<td><input type="text" name="country" placeholder="Country"></td>
 					</tr>
 
 					<tr>
-						<td><input type="text" name="city"
-							placeholder="City"></td>
+						<td><input type="text" name="city" placeholder="City"></td>
 					</tr>
 
 					<tr>
-						<td><input type="text" name="street"
-							placeholder="Street "></td>
+						<td><input type="text" name="street" placeholder="Street "></td>
 					</tr>
 
 					<tr>
-						<td><input type="text" name="apt" 
-						placeholder="Building #">
+						<td><input type="text" name="apt" placeholder="Building #">
 						</td>
 					</tr>
 					<tr>
 						<td>
-						
-						<input type="text" name="doctor_id" 
-						placeholder="doc id">
-						
-						
-						  <form:select path="doctor" items="${doctors}" itemValue="id" itemLabel="${doctor.getId() "></form:select> 
+							<!-- <input type="text" name="doctor_id" 
+						placeholder="doc id"> --> <form:select path="doctor"
+								items="${doctor}" itemValue="id" itemLabel="firstName"></form:select>
 						</td>
 					</tr>
 					<tr>
@@ -64,8 +58,8 @@
 
 
 		</form:form>
-		
-	
+
+
 
 		<div style=""></div>
 
