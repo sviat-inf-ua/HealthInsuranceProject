@@ -28,7 +28,7 @@ public class customerController {
 	@Autowired
 	private UserValidator customerValidator; 
 	
-	@RequestMapping(value="registerUser", method=RequestMethod.GET)
+	@RequestMapping(value="/registerUser", method=RequestMethod.GET)
 	public String register(ModelMap model) {
 		model.addAttribute("customer", new Customer());
 		return "registerUser";

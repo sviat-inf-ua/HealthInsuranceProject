@@ -6,5 +6,5 @@
 
 <a href="${pageContext.request.contextPath}/admin/showLocationForm">showLocationForm</a>
 
-<a href="registerUser.spring">Register page</a>
+<a href="registerUser">Register page</a>
 	<a href="login.spring">Login</a>
