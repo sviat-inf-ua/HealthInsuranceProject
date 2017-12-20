@@ -111,7 +111,7 @@ public class CustomerDaoImpl implements ICustomerDao {
 			ex.printStackTrace();
 		} finally {
 			session.flush();
-			session.close();
+			//session.close();
 		}
 		return customer;
 	}
